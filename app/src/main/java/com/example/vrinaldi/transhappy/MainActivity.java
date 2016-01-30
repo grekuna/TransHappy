@@ -65,14 +65,19 @@ public class MainActivity extends AppCompatActivity {
                     res1Trail.setText(fromStation.getPlatform());
                 } else {
                     res1Off.setText("12:10");
-                    res1Trail.setText("1");
+                    res1Trail.setText("3");
                 }
                 if(toStation != null) {
                     res1On.setText(toStation.getArrival());
                 } else {
                     res1On.setText("13:24");
                 }
-                res1Duration.setText(res1.getDuration());
+                String duration = res1.getDuration();
+                if(duration != null && ! duration.isEmpty()) {
+                    res1Duration.setText(res1.getDuration());
+                } else {
+                    res1Duration.setText("01:00");
+                }
             }
 
         }

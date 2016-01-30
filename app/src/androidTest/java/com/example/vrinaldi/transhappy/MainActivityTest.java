@@ -28,9 +28,19 @@ public class MainActivityTest {
     public ActivityTestRule<MainActivity> mainActivityActivityTestRule = new ActivityTestRule<MainActivity>(MainActivity.class);
 
     @Test
-    public void testSearch() {
+    public void testShowElements() {
         onView(withId(R.id.requestFrom)).check(matches(withText(FROM)));
         onView(withId(R.id.requestTo)).check(matches(withText(TO)));
+        onView(withId(R.id.requestTo)).check(matches(withText(TO)));
 
+    }
+
+    @Test
+    public void testSearch() {
+        onView(withId(R.id.sarchButton)).perform(click());
+        onView(withId(R.id.firstResOff)).check(matches(withText("12:10")));
+        onView(withId(R.id.firstResOn)).check(matches(withText("13:10")));
+        onView(withId(R.id.firstResDuration)).check(matches(withText("01:00")));
+        onView(withId(R.id.firstResTrail)).check(matches(withText("3")));
     }
 }
