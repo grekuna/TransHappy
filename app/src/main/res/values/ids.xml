@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="requestFrom" type="id">Von:</item>
+    <item name="requestTo" type="id">Nach:</item>
+    <item name="search" type="id">Verbindung suchen</item>
+    <item name="off" type="id">Ab</item>
+    <item name="on" type="id">An</item>
+    <item name="duration" type="id">Dauer</item>
+    <item name="trail" type="id">Gleis</item>
+</resources>

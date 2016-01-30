@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -9,8 +9,112 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.vrinaldi.transhappy.MainActivity">
 
-    <TextView
+
+    <TableLayout
+        android:id="@+id/searchParamsTable"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:id="@+id/fromRow">
+
+            <TextView
+                android:id="@id/requestFrom"
+                android:text="@id/requestFrom"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/searchFromText"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/toRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@id/requestTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@id/requestTo"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/searchToText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/sarchButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_below="@id/searchParamsTable"
+        android:layout_span="2"
+        android:text="@id/search" />
+
+    <TableLayout
+        android:id="@+id/resultTable"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/sarchButton"
+        >
+
+        <TableRow
+            android:id="@+id/headerRow"
+            android:color="@color/colorPrimary">
+            <TextView
+                android:id="@id/off"
+                android:layout_marginRight="40dp"
+                android:text="@id/off"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@id/on"
+                android:layout_marginRight="50dp"
+                android:text="@id/on"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@id/duration"
+                android:layout_marginRight="40dp"
+                android:text="@id/duration"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@id/trail"
+                android:text="@id/trail"
+                android:textSize="20dp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/firstResult">
+            <TextView
+                android:id="@+id/firstResOff"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/firstResOn"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/firstResDuration"
+                android:textSize="20dp"
+                />
+
+
+            <TextView
+                android:id="@+id/firstResTrail"
+                android:textSize="20dp"
+                />
+
+        </TableRow>
+
+    </TableLayout>
 </RelativeLayout>
