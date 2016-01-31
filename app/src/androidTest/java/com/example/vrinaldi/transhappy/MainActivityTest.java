@@ -17,6 +17,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 /**
  * Created by vrinaldi on 30/01/16.
+ * Test
  */
 
 @RunWith(AndroidJUnit4.class)
@@ -44,3 +45,7 @@ public class MainActivityTest {
         onView(withId(R.id.firstResTrail)).check(matches(withText("3")));
     }
 }
+
+//Commment to test push Gregor
+//Comment 2
+
